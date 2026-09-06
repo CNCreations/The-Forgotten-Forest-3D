@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#07130d">
+<meta name="description" content="The Forgotten Forest — 3D survival adventure.">
+<title>The Forgotten Forest — 3D Survival Adventure</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="css/game.css">
+</head>
+<body>
+<canvas id="game"></canvas>
+
+<div id="loading">
+  <div class="loading-card">
+    <div class="logo">THE FORGOTTEN FOREST</div>
+    <div class="tag">3D SURVIVAL ADVENTURE</div>
+    <div class="load-track"><div id="load-bar"></div></div>
+    <small id="load-text">Starting world…</small>
+  </div>
+</div>
+
+<div id="fatal" class="hide">
+  <div class="fatal-card">
+    <h2>3D World Could Not Start</h2>
+    <p id="fatal-text">WebGL is unavailable.</p>
+    <button onclick="location.reload()">RETRY</button>
+  </div>
+</div>
+
+<div id="hud">
+  <div class="top">
+    <div class="brand"><b>THE FORGOTTEN FOREST</b><small>3D SURVIVAL ADVENTURE</small></div>
+    <div class="stat-row">
+      <span>❤ <b id="hp">100</b></span>
+      <span>🍖 <b id="food">100</b></span>
+      <span>💧 <b id="waterstat">100</b></span>
+      <span>⚡ <b id="stamina">100</b></span>
+      <button id="share" aria-label="Share">↗</button>
+    </div>
+  </div>
+
+  <div class="objective">
+    <b>DAY <span id="day">1</span></b>
+    <span id="objective-text">Gather wood and explore the forest.</span>
+  </div>
+
+  <div class="bag">
+    🪵 <b id="wood">0</b>
+    &nbsp; 🪨 <b id="stone">0</b>
+    &nbsp; 🍓 <b id="berries">0</b>
+  </div>
+
+  <div id="toast"></div>
+
+  <div id="mobile-controls">
+    <div class="joystick">
+      <button data-key="w">▲</button>
+      <div><button data-key="a">◀</button><button data-key="s">▼</button><button data-key="d">▶</button></div>
+    </div>
+    <div class="camera-buttons"><button id="look-left">⟲</button><button id="look-right">⟳</button></div>
+    <button id="action">ACTION</button>
+  </div>
+
+  <div class="desktop-hint">WASD / Arrows • Shift Sprint • E Interact • Drag Mouse Look</div>
+</div>
+
+<script src="js/game.js"></script>
+</body>
+</html>

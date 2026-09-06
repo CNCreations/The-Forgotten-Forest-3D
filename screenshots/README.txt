@@ -1,0 +1,1 @@
+Replace this file with real gameplay screenshots after testing. Keep screenshots separate from game code.
