@@ -1,1 +1,0 @@
-Add the four real gameplay screenshots here after testing.
